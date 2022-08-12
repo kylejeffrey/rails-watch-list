@@ -15,8 +15,8 @@
       </div>
     <% end %>
   </div>
-  <div class="container my-3 d-flex justify-content-around">
-    <%= link_to "Return to all lists", lists_path, class: "btn btn-primary" %>
+  <div class="container my-3 d-flex justify-content-center">
+    <%= link_to "Return to all lists", lists_path, class: "btn btn-success me-5" %>
     <%= link_to "Delete List", list_path(@list), data: { turbo_method: "delete", turbo_confirm: "Delete the #{@list.name} list?"}, class: "btn btn-danger" %>
   </div>
 </div>

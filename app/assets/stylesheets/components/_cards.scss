@@ -14,35 +14,35 @@
   position: relative;
 }
 
-.card-convict-link {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  text-decoration: none;
-  color: white;
-  opacity: 0.8;
+// .card-convict-link {
+//   position: absolute;
+//   top: 8px;
+//   left: 8px;
+//   text-decoration: none;
+//   color: white;
+//   opacity: 0.8;
 
-  &:hover {
-    color: white;
-    opacity: 1;
-    text-decoration: none;
-  }
-}
+//   &:hover {
+//     color: white;
+//     opacity: 1;
+//     text-decoration: none;
+//   }
+// }
 
-.card-remove-link {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  text-decoration: none;
-  color: $red;
-  opacity: 0.8;
+// .card-remove-link {
+//   position: absolute;
+//   top: 8px;
+//   right: 8px;
+//   text-decoration: none;
+//   color: $red;
+//   opacity: 0.8;
 
-  &:hover {
-    color: $red;
-    opacity: 1;
-    text-decoration: none;
-  }
-}
+//   &:hover {
+//     color: $red;
+//     opacity: 1;
+//     text-decoration: none;
+//   }
+// }
 
 .card-tags {
   position: absolute;
