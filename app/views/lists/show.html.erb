@@ -9,14 +9,14 @@
 <div class="container my-3">
   <div class="cards">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
+      <div class="card-category text-light" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
         <%= bookmark.movie.title %>
         <%#= link_to bookmark.movie.name, list_path(list), class: "btn btn-light" %>
       </div>
     <% end %>
   </div>
   <div class="container my-3 d-flex justify-content-center">
-    <%= link_to "Return to all lists", lists_path, class: "btn btn-success me-5" %>
+    <%= link_to "Return to all lists", lists_path, class: "btn btn-light me-5" %>
     <%= link_to "Delete List", list_path(@list), data: { turbo_method: "delete", turbo_confirm: "Delete the #{@list.name} list?"}, class: "btn btn-danger" %>
   </div>
 </div>

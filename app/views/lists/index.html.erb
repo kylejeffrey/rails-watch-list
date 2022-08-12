@@ -5,13 +5,12 @@
     <%= link_to "New List", new_list_path, class: "btn btn-primary" %>
   </div>
 </div>
-<div class="container mt-3">
+<div class="container my-3">
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="item card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= get_url(list) %>)">
-        <%= link_to list.name, list_path(list), class: "btn btn-light" %>
+      <div class="item card-category shadow-lg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= get_url(list) %>)">
+        <%= link_to list.name, list_path(list), class: "btn btn-dark" %>
       </div>
     <% end %>
   </div>
 </div>
-<%#= list.photo.attached? ? cl_image_path(list.photo.key) : list.bookmarks.first.movie.poster_url %>
