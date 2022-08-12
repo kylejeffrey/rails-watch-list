@@ -47,6 +47,8 @@ gem "sassc-rails"
 
 # Added Gems
 gem "autoprefixer-rails"
+gem 'cloudinary', '~> 1.16.0'
+gem 'dotenv-rails', groups: [:development, :test]
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 
