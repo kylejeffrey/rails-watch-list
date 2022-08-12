@@ -1,19 +1,25 @@
-<div class="container mt-3">
-  <h1><%= @list.name %></h1>
-  <%= link_to "Bookmark a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
-  <div class="container my-3">
-    <div class="cards">
-      <% @list.bookmarks.each do |bookmark| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
-          <%= bookmark.movie.title %>
-          <%#= link_to bookmark.movie.name, list_path(list), class: "btn btn-light" %>
-        </div>
-      <% end %>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.photo.key, height: 600, crop: :fill %>);">
+  <div class="container">
+    <h1 class="mb-3"><%= @list.name %></h1>
+    <%# <p>Change your life and learn to code at one of our campuses around the world.</p> %>
+    <%= link_to "Bookmark a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
 </div>
-<%= link_to "Return to all lists", lists_path, class: "btn btn-primary" %>
-<%= link_to "Delete List", list_path(@list), data: { turbo_method: "delete", turbo_confirm: "Delete the #{@list.name} list?"}, class: "btn btn-danger" %>
+<div class="container my-3">
+  <div class="container my-3 d-flex justify-content-around">
+    <%= link_to "Return to all lists", lists_path, class: "btn btn-primary" %>
+    <%= link_to "Delete List", list_path(@list), data: { turbo_method: "delete", turbo_confirm: "Delete the #{@list.name} list?"}, class: "btn btn-danger" %>
+  </div>
+  <div class="cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
+        <%= bookmark.movie.title %>
+        <%#= link_to bookmark.movie.name, list_path(list), class: "btn btn-light" %>
+      </div>
+    <% end %>
+  </div>
+</div>
 <%#= link_to bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: "Delete #{bookmark.movie.title}?"} do %>
   <%# <i class="fa-solid fa-trash-can"></i> %>
   <%# end %>
