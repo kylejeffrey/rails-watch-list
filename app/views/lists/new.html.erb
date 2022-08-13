@@ -1,8 +1,16 @@
 <div class="container">
-  <h1>Make a new list!</h1>
-  <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit class: "btn btn-primary"%>
-  <% end %>
+  <div class="container col-8 bg-light p-3 mt-5 rounded">
+    <h1 class="border-bottom p-3">Make a new list!</h1>
+    <div class="container my-3 ">
+      <%= simple_form_for(@list, html: {class: 'form-outline'}) do |f| %>
+        <div class="mb-3">
+          <%= f.input :name, input_html: { class:'bg-light' } %>
+        </div>
+        <div class="mb-5">
+          <%= f.input :photo, as: :file, input_html: { class:'bg-light' } %>
+        </div>
+        <%= f.submit class: "btn btn-primary"%>
+      <% end %>
+    </div>
+  </div>
 </div>
