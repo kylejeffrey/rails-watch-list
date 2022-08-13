@@ -1,8 +1,16 @@
 <div class="container">
-  <h1 class="text-light">Add Movie to <%= @list.name %></h1>
-  <%= simple_form_for([@list, @bookmark]) do |f| %>
-    <%= f.input :comment %>
-    <%= f.association :movie, class: "text-light" %>
-    <%= f.submit :Submit, class: 'btn btn-primary' %>
-  <% end %>
+  <div class="container col-8 bg-light p-3 mt-5 rounded">
+    <h1 class="border-bottom p-3">Add Movie to <%= @list.name %></h1>
+    <div class="container my-3">
+      <%= simple_form_for([@list, @bookmark], html: {class: 'form-outline'}) do |f| %>
+        <div class="mb-3">
+          <%= f.association :movie, input_html: { class:'bg-light' } %>
+        </div>
+        <div class="mb-5">
+          <%= f.input :comment, input_html: { class:'bg-light' } %>
+        </div>
+        <%= f.submit :Submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
 </div>

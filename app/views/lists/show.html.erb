@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>);">
   <div class="container">
-    <h1 class="mb-3"><%= @list.name %></h1>
+    <h1 class=""><%= @list.name %></h1>
     <%# <p>Change your life and learn to code at one of our campuses around the world.</p> %>
     <%= link_to "Bookmark a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
@@ -16,7 +16,7 @@
     <% end %>
   </div>
   <div class="container my-3 d-flex justify-content-center">
-    <%= link_to "Return to all lists", lists_path, class: "btn btn-light me-5" %>
+    <%= link_to "Return To Lists", lists_path, class: "btn btn-light me-5" %>
     <%= link_to "Delete List", list_path(@list), data: { turbo_method: "delete", turbo_confirm: "Delete the #{@list.name} list?"}, class: "btn btn-danger" %>
   </div>
 </div>
