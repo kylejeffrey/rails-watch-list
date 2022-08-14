@@ -7,7 +7,7 @@
           <%= f.association :movie, input_html: { class:'bg-light' } %>
         </div>
         <div class="mb-5">
-          <%= f.input :comment, input_html: { class:'bg-light' } %>
+          <%= f.rich_text_area :comment, input_html: { class:'bg-light' } %>
         </div>
         <%= f.submit :Submit, class: 'btn btn-primary' %>
       <% end %>
