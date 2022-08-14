@@ -1,9 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>);">
   <div class="container">
     <h1 class=""><%= @list.name %></h1>
-    <%# <p>Change your life and learn to code at one of our campuses around the world.</p> %>
     <%= link_to "Bookmark a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
-    <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
 </div>
 <div class="container my-3">
@@ -11,7 +9,6 @@
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card-category text-light" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
         <%= bookmark.movie.title %>
-        <%#= link_to bookmark.movie.name, list_path(list), class: "btn btn-light" %>
       </div>
     <% end %>
   </div>
