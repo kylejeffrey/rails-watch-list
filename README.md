@@ -1,24 +1,3 @@
-# README
+A web application to organise and bookmark movies into themed watchlists for any mood or genre.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<img width="1440" alt="Watchlist" src="https://user-images.githubusercontent.com/76161172/198823831-bd7c2426-aec3-45f0-bff0-a6d60642c02c.png">
